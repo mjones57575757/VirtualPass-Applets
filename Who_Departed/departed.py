@@ -16,4 +16,3 @@ def get(uname, passwd, ip):
         description = "The user " + str(user_info[x]["usrinfo"]["first_name"]) + " " + str(user_info[x]["usrinfo"]["last_name"]) + "is currently departed from room(s) " + room_string + " they departed at " + str(user_info[x]['srvinfo']['hour_gon']) + ":" + str(user_info[x]['srvinfo']['minute_gon'])
         output.append(description)
     return output
-print(get("admin","admin","1c3f-73-229-218-231.ngrok.io"))
