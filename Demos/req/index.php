@@ -2,7 +2,7 @@
 $uname = $_GET['uname'];
 $passwd = $_GET['passwd'];
 $hostname = $_GET['hostname'];
-$url = '?uname=' . $uname . '&passwd=' . $passwd . '&hostname=' . $passwd
+$url = '?uname=' . $uname . '&passwd=' . $passwd . '&hostname=' . $hostname
 ?>
 <button onclick="/Demos/req/departed.php<?php echo $url;?>">View departed users</button>
 <button onclick="/Demos/req/view_user.php<?php echo $url;?>">View all users</button>

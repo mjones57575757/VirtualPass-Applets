@@ -14,7 +14,7 @@ $response = curl_exec($ch);
 curl_close($ch);
 if ($response == 1){
     echo ("authentication succeded");
-    header("Location: /Demos/req/index.php?uname" . $uname . "&passwd" . $passwd . "&hostname=" . $hostname);
+    header("Location: /Demos/req/index.php?uname=" . $uname . "&passwd=" . $passwd . "&hostname=" . $hostname);
 } else{
     echo ("Authentication failed ");
 }
