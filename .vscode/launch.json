@@ -14,14 +14,14 @@
                 "-S",
                 "localhost:8080",
                 "-t",
-                "."
+                "./Demos"
             ],
             "program": "",
             "cwd": "${workspaceRoot}",
             "port": 9003,
             "serverReadyAction": {
                 "pattern": "Development Server \\(http://localhost:([0-9]+)\\) started",
-                "uriFormat": "http://localhost:%s/Demos/",
+                "uriFormat": "http://localhost:%s/",
                 "action": "openExternally"
             }
         },
