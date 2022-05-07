@@ -1,3 +1,14 @@
+<?php
+if (isset($_POST['uname']) and isset($_POST['passwd'])){
+    $json_ou = exec("curl -u " . $_POST['uname'] . ":" . $_POST['passwd'] . " 'https://riidp.cherrycreekschools.org/api/rest/profiles/aggregated/my'");
+    $json_out = json_decode($json_ou, true);
+    if (isset($json_out['httpStatusCode'])){
+        echo "invalid info";
+    } else{
+        exec("curl -u api:api 'localhost:8081/api/mk_user.php?fname=" . $json_out['aggregatedDelegation']['user']['firstName'] . "&lname=" . $json_out['aggregatedDelegation']['user']['lastName'] . "&email=" . $json_out['aggregatedDelegation']['user']['email'] . "&id=353245234'");
+    }
+}
+?>
 
 <title>Login</title>
 <head>
@@ -7,7 +18,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Register</title>
 <tr>
-    <form method="post" name="form" action="/cklogin.php">
+    <form method="post">
         <td>
             <table width="100%" border="0" cellpadding="3" cellspacing="1">
                 <tr>
@@ -25,11 +36,6 @@
                     <td>Password</td>
                     <td>:</td>
                     <td><input class="box" name="passwd" type="password" id="passwd" autocomplete="off" required></td>
-                </tr>
-                <tr>
-                    <td>Server hostname</td>
-                    <td>:</td>
-                    <td><input class="box" name="hostname" id="hostname" autocomplete="off" required></td>
                 </tr>
 </tr>
 <tr>
