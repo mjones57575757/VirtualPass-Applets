@@ -4,6 +4,7 @@
       "name":"ccsd_auth",
       "html_name":"CCSD Teacher Portal Authentication",
       "changed":0,
+      "setup":"None",
       "location":{
         "0":"/src/usr_pre_fls/teacher_auth.php"
       },
