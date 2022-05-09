@@ -2,10 +2,13 @@
 if (isset($_POST['uname']) and isset($_POST['passwd'])){
     $json_ou = exec("curl -u " . $_POST['uname'] . ":" . $_POST['passwd'] . " 'https://riidp.cherrycreekschools.org/api/rest/profiles/aggregated/my'");
     $json_out = json_decode($json_ou, true);
+    $ou_list = explode(",", $json_out['aggregatedDelegation']['user']['dn']);
+    $status = explode("=", $ou_list[1]);
+    print_r($status[1] . "\n");
     if (isset($json_out['httpStatusCode'])){
         echo "invalid info";
     } else{
-        print_r($json_out);
+        //print_r($json_out);
         echo("Hello " . $json_out['aggregatedDelegation']['user']['firstName'] . " " . $json_out['aggregatedDelegation']['user']['lastName'] . ", You have the email " . $json_out['aggregatedDelegation']['user']['email']);
     }
 }
