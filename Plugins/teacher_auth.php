@@ -8,7 +8,7 @@ function auth($uname, $passwd){
         $ou_list = explode(",", $json_out['aggregatedDelegation']['user']['dn']);
         $status = explode("=", $ou_list[1]);
         if ($status[1] == "Staff"){
-            return true;
+            return 1;
         } else{
             return "you are not authorized to access this resource";
         }
