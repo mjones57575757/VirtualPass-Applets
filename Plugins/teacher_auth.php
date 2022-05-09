@@ -15,3 +15,4 @@ function auth($uname, $passwd){
     }
 
 }
+?>
