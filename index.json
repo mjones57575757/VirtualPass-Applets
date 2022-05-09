@@ -1,6 +1,7 @@
 {
   "plugins":{
     "ccsd_auth":{
+      "name":"ccsd_auth",
       "html_name":"CCSD Teacher Portal Authentication",
       "location":"/src/usr_pre_fls/teacher_auth.php",
       "description":"This plugin allows you to use the My Cherry Creek authentication system to authenticate staff into the teacher portal this plugin will not allow students to enter the portal.",
