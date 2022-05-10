@@ -69,7 +69,7 @@ if ($_GET['step'] == 0){
         </table>
         ';
     } else{
-        mkdir("./tmp/mailer");
+        mkdir("./mailer");
         $exception_file = fopen("./tmp/mailer/Exception.php", "w");
         $oauth_file = fopen("./tmp/mailer/OAuth.php", "w");
         $mailer_file = fopen("./tmp/mailer/PHPMailer.php", "w");
@@ -124,17 +124,17 @@ if ($_GET['step'] == "1"){
 </table>';
 }
 if ($_GET['step'] == "2"){
-    mkdir("../../../../src/usr_pre_fls/include");
-    copy("./tmp/include/Exception.php", "../../../../src/usr_pre_fls/include/Exception.php");
-    copy("./tmp/include/OAuth.php", "../../../../src/usr_pre_fls/include/OAuth.php");
-    copy("./tmp/include/PHPMailer.php", "../../../../src/usr_pre_fls/include/PHPMailer.php");
-    copy("./tmp/include/SMTP.php", "../../../../src/usr_pre_fls/include/SMTP.php");
-    unlink("./tmp/include/Exception.php");
-    unlink("./tmp/include/OAuth.php");
-    unlink("./tmp/include/PHPMailer.php");
-    unlink("./tmp/include/SMTP.php");
-    unlink("./tmp/email.php");
-    rmdir("./tmp/include");
-    rmdir("./tmp");
+    mkdir("../../../../src/usr_pre_fls/mailer");
+    copy("./mailer/Exception.php", "../../../../src/usr_pre_fls/mailer/Exception.php");
+    copy("./mailer/OAuth.php", "../../../../src/usr_pre_fls/mailer/OAuth.php");
+    copy("./mailer/PHPMailer.php", "../../../../src/usr_pre_fls/mailer/PHPMailer.php");
+    copy("./mailer/SMTP.php", "../../../../src/usr_pre_fls/mailer/SMTP.php");
+    unlink("./mailer/Exception.php");
+    unlink("./mailer/OAuth.php");
+    unlink("./mailer/PHPMailer.php");
+    unlink("./mailer/SMTP.php");
+    unlink("./email.php");
+    rmdir("./mailer");
+    rmdir("../tmp");
     header("Location: /administrator/plugin_manager/use_plugin.php?plugin=" . $_GET['plugin'] . "&setup=1");
 }
