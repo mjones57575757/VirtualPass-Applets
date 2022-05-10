@@ -70,11 +70,11 @@ if ($_GET['step'] == 0){
         ';
     } else{
         mkdir("./mailer");
-        $exception_file = fopen("./tmp/mailer/Exception.php", "w");
-        $oauth_file = fopen("./tmp/mailer/OAuth.php", "w");
-        $mailer_file = fopen("./tmp/mailer/PHPMailer.php", "w");
-        $stmp_file = fopen("./tmp/mailer/SMTP.php", "w");
-        $email_file = fopen("./tmp/email.php", "w");
+        $exception_file = fopen("../tmp/mailer/Exception.php", "w");
+        $oauth_file = fopen("../tmp/mailer/OAuth.php", "w");
+        $mailer_file = fopen("../tmp/mailer/PHPMailer.php", "w");
+        $stmp_file = fopen("../tmp/mailer/SMTP.php", "w");
+        $email_file = fopen("../tmp/email.php", "w");
         fwrite($exception_file, file_get_contents("https://raw.githubusercontent.com/PHPMailer/PHPMailer/master/src/Exception.php"));
         fwrite($oauth_file, file_get_contents("https://raw.githubusercontent.com/PHPMailer/PHPMailer/master/src/OAuth.php"));
         fwrite($mailer_file, file_get_contents("https://raw.githubusercontent.com/PHPMailer/PHPMailer/master/src/PHPMailer.php"));
@@ -85,9 +85,9 @@ if ($_GET['step'] == 0){
         fclose($mailer_file);
         fclose($stmp_file);
         fclose($email_file);
-        include "./tmp/email.php";
+        include "../tmp/email.php";
         send($_POST['email'], $_POST['passwd'], $_POST['t_email'], $_POST['username']);
-        header("Location: /administrator/plugin_manager/setup.php?plugin=" . $_GET['plugin'] . "&step=1");
+        header("Location: /administrator/plugin_manager/tmp/setup.php?plugin=" . $_GET['plugin'] . "&step=1");
     }
 }
 if ($_GET['step'] == "1"){
