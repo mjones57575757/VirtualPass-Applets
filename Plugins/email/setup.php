@@ -44,7 +44,7 @@ if ($_GET['step'] == 0){
                         <tr>
                             <td>Sender password</td>
                             <td>:</td>
-                            <td><input class="box" name="passwd" autocomplete="off" type="text" id="passwd"></td>
+                            <td><input class="box" type="password" name="passwd" autocomplete="off" type="text" id="passwd"></td>
                         </tr>
                         <tr>
                             <td>Test reciver email</td>
