@@ -86,7 +86,7 @@ if ($_GET['step'] == 0){
         fclose($stmp_file);
         fclose($email_file);
         include "../tmp/email.php";
-        send($_POST['email'], $_POST['passwd'], $_POST['t_email'], $_POST['username']);
+        send($_POST['email'], $_POST['passwd'], $_POST['t_email'], $_POST['username'], "https://raw.githubusercontent.com/Duedot43/VirtualPass/master/src/administrator/index.html");
         header("Location: /administrator/plugin_manager/tmp/setup.php?plugin=" . $_GET['plugin'] . "&step=1");
     }
 }
