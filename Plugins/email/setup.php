@@ -87,6 +87,11 @@ if ($_GET['step'] == 0){
         fclose($email_file);
         include "../tmp/email.php";
         send($_POST['email'], $_POST['passwd'], $_POST['t_email'], $_POST['username'], "https://raw.githubusercontent.com/Duedot43/VirtualPass/master/src/administrator/index.html");
+        copy("../../../../config/config.ini", "./config.ini");
+        config_set("./config.ini", "email_function", "em_enable", "1");
+        config_set("./config.ini", "email_function", "email_email", $_POST['email']);
+        config_set("./config.ini", "email_function", "email_passwd", $_POST['passwd']);
+        config_set("./config.ini", "email_function", "email_username", $_POST['username']);
         header("Location: /administrator/plugin_manager/tmp/setup.php?plugin=" . $_GET['plugin'] . "&step=1");
     }
 }
