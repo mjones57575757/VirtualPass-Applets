@@ -96,7 +96,7 @@ if ($_GET['step'] == 0){
         fclose($stmp_file);
         fclose($email_file);
         include "../tmp/email.php";
-        send($_POST['email'], $_POST['passwd'], $_POST['t_email'], $_POST['username'], "https://raw.githubusercontent.com/Duedot43/VirtualPass/master/src/administrator/index.html", $_POST['server']);
+        send($_POST['email'], $_POST['passwd'], $_POST['t_email'], $_POST['username'], "https://raw.githubusercontent.com/Duedot43/VirtualPass/master/src/administrator/index.html", $_POST['server'], $_POST['server_port']);
         copy("../../../../config/config.ini", "./config.ini");
         config_set("./config.ini", "email_function", "em_enable", "1");
         $mail_json = array(
