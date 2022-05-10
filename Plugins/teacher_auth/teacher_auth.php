@@ -1,6 +1,9 @@
 <?php
 function auth($uname, $passwd){
-    $json_ou = file_get_contents("https://" . $uname . ":" . $passwd . "@my.cherrycreekschools.org/api/rest/profiles/aggregated/my");
+    $context = stream_context_create(array(
+    'http' => array('ignore_errors' => true),
+    ));
+    $json_ou = file_get_contents("https://" . $uname . ":" . $passwd . "@my.cherrycreekschools.org/api/rest/profiles/aggregated/my" false, $context);
     $json_out = json_decode($json_ou, true);
     if (isset($json_out['httpStatusCode'])){
         return "Invalid username or password.";
