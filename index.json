@@ -39,7 +39,7 @@
       },
       "description":"This plugin enables the use of emails",
       "clone_url":{
-        "0":"https://raw.githubusercontent.com/Duedot43/VirtualPass-Applets/master/Plugins/email.php",
+        "0":"https://raw.githubusercontent.com/Duedot43/VirtualPass-Applets/master/Plugins/email/email.php",
         "1":"None"
       },
       "orig_url":{
