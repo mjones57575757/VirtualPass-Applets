@@ -141,7 +141,7 @@ if ($_GET['step'] == "2"){
     copy("./mailer/PHPMailer.php", "../../../../src/usr_pre_fls/mailer/PHPMailer.php");
     copy("./mailer/SMTP.php", "../../../../src/usr_pre_fls/mailer/SMTP.php");
     copy("./mail.json", "../../../../config/mail.json");
-    fwrite(fopen("../../../../config/config.ini"), file_get_contents("./config.ini"));
+    fwrite(fopen("../../../../config/config.ini", "w"), file_get_contents("./config.ini"));
     unlink("./mailer/Exception.php");
     unlink("./mailer/OAuth.php");
     unlink("./mailer/PHPMailer.php");
