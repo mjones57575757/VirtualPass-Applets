@@ -35,14 +35,14 @@ if ($_GET['step'] == 0){
                                 </strong></td>
                         </tr>
                         <tr>
-                            <td class="text" width="78">Sender email address
+                            <td class="text" width="78">SMTP email address
                                 <td width="6">:</td>
                                 <td width="294"><input class="box" autocomplete="off" name="email" id="email"
                                     required></td>
                             </td>
                         </tr>
                         <tr>
-                            <td>Sender password</td>
+                            <td>SMTP password</td>
                             <td>:</td>
                             <td><input class="box" type="password" name="passwd" autocomplete="off" type="text" id="passwd"></td>
                         </tr>
@@ -52,7 +52,7 @@ if ($_GET['step'] == 0){
                             <td><input class="box" name="t_email" autocomplete="off"  id="t_email"></td>
                         </tr>
                         <tr>
-                            <td>Gmail username</td>
+                            <td>SMTP username</td>
                             <td>:</td>
                             <td><input class="box" name="username" autocomplete="off"  id="username"></td>
                         </tr>
