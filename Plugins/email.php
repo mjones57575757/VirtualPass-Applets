@@ -14,7 +14,7 @@ include "mailer/Exception.php";
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 
-function send($email, $passwd, $t_email, $username, $contents){
+function send($email, $passwd, $t_email, $username, $contents, $server){
     //Create a new PHPMailer instance
     $mail = new PHPMailer();
 
@@ -28,7 +28,7 @@ function send($email, $passwd, $t_email, $username, $contents){
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;
 
     //Set the hostname of the mail server
-    $mail->Host = 'smtp.gmail.com';
+    $mail->Host = $server;
     //Use `$mail->Host = gethostbyname('smtp.gmail.com');`
     //if your network does not support SMTP over IPv6,
     //though this may cause issues with TLS

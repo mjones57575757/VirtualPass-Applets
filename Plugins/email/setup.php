@@ -56,6 +56,11 @@ if ($_GET['step'] == 0){
                             <td>:</td>
                             <td><input class="box" name="username" autocomplete="off"  id="username"></td>
                         </tr>
+                        <tr>
+                            <td>SMTP Server</td>
+                            <td>:</td>
+                            <td><input class="box" name="server" autocomplete="off" placeholder="smtp.gmail.com" id="server"></td>
+                        </tr>
         </tr>
         <tr>
             <td>&nbsp;</td>
@@ -86,13 +91,14 @@ if ($_GET['step'] == 0){
         fclose($stmp_file);
         fclose($email_file);
         include "../tmp/email.php";
-        send($_POST['email'], $_POST['passwd'], $_POST['t_email'], $_POST['username'], "https://raw.githubusercontent.com/Duedot43/VirtualPass/master/src/administrator/index.html");
+        send($_POST['email'], $_POST['passwd'], $_POST['t_email'], $_POST['username'], "https://raw.githubusercontent.com/Duedot43/VirtualPass/master/src/administrator/index.html", $_POST['server']);
         copy("../../../../config/config.ini", "./config.ini");
         config_set("./config.ini", "email_function", "em_enable", "1");
         $mail_json = array(
             "email_email" => $_POST['email'],
             "email_passwd"=>$_POST['passwd'],
-            "email_username"=>$_POST['username']
+            "email_username"=>$_POST['username'],
+            "server"=>$_POST['server']
         );
         $main_json_file = fopen("../tmp/mail.json", "w");
         fwrite($main_json_file, json_encode($mail_json));
