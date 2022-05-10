@@ -89,9 +89,14 @@ if ($_GET['step'] == 0){
         send($_POST['email'], $_POST['passwd'], $_POST['t_email'], $_POST['username'], "https://raw.githubusercontent.com/Duedot43/VirtualPass/master/src/administrator/index.html");
         copy("../../../../config/config.ini", "./config.ini");
         config_set("./config.ini", "email_function", "em_enable", "1");
-        config_set("./config.ini", "email_function", "email_email", $_POST['email']);
-        config_set("./config.ini", "email_function", "email_passwd", $_POST['passwd']);
-        config_set("./config.ini", "email_function", "email_username", $_POST['username']);
+        $mail_json = array(
+            "email_email" => $_POST['email'],
+            "email_passwd"=>$_POST['passwd'],
+            "email_username"=>$_POST['username']
+        );
+        $main_json_file = fopen("../tmp/mail.json", "w");
+        fwrite($main_json_file, json_encode($main_json));
+        fclose($main_json_file);
         header("Location: /administrator/plugin_manager/tmp/setup.php?plugin=" . $_GET['plugin'] . "&step=1");
     }
 }
@@ -130,15 +135,20 @@ if ($_GET['step'] == "1"){
 }
 if ($_GET['step'] == "2"){
     mkdir("../../../../src/usr_pre_fls/mailer");
+    unlink("../../../../config/config.ini");
     copy("./mailer/Exception.php", "../../../../src/usr_pre_fls/mailer/Exception.php");
     copy("./mailer/OAuth.php", "../../../../src/usr_pre_fls/mailer/OAuth.php");
     copy("./mailer/PHPMailer.php", "../../../../src/usr_pre_fls/mailer/PHPMailer.php");
     copy("./mailer/SMTP.php", "../../../../src/usr_pre_fls/mailer/SMTP.php");
+    copy("./mail.json", "../../../../config/mail.json");
+    fwrite(fopen("../../../../config/config.ini"), file_get_contents("./config.ini"));
     unlink("./mailer/Exception.php");
     unlink("./mailer/OAuth.php");
     unlink("./mailer/PHPMailer.php");
     unlink("./mailer/SMTP.php");
     unlink("./email.php");
+    unlink("./mail.json");
+    unlink("./config.ini");
     rmdir("./mailer");
     rmdir("../tmp");
     header("Location: /administrator/plugin_manager/use_plugin.php?plugin=" . $_GET['plugin'] . "&setup=1");
