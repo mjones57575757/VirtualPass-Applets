@@ -122,7 +122,7 @@ if ($_GET['step'] == "1"){
 </tr>
 </table>';
 }
-if ($_GET['setup'] == "2"){
+if ($_GET['step'] == "2"){
     mkdir("../../../../src/usr_pre_fls/include");
     copy("./tmp/include/Exception.php", "../../../../src/usr_pre_fls/include/Exception.php");
     copy("./tmp/include/OAuth.php", "../../../../src/usr_pre_fls/include/OAuth.php");
