@@ -10,7 +10,7 @@
       },
       "description":"This plugin allows you to use the My Cherry Creek authentication system to authenticate staff into the teacher portal this plugin will not allow students to enter the portal.",
       "clone_url":{
-        "0":"https://raw.githubusercontent.com/Duedot43/VirtualPass-Applets/master/Plugins/teacher_auth.php"
+        "0":"https://raw.githubusercontent.com/Duedot43/VirtualPass-Applets/master/Plugins/teacher_auth/teacher_auth.php"
       },
       "orig_url":{
         "0":"https://raw.githubusercontent.com/Duedot43/VirtualPass/master/src/usr_pre_fls/teacher_auth.php"
@@ -22,6 +22,10 @@
       "to remove_dir":"0",
       "remove_dir":{
         "0":"None"
+      },
+      "vers":"0",
+      "valid_ver":{
+        "0":"V9.0"
       }
     },
     "emails":{
@@ -54,6 +58,10 @@
       "to_remove_dir":"0",
       "remove_dir":{
         "0":"/src/usr_pre_fls/mailer"
+      },
+      "vers":"0",
+      "valid_ver":{
+        "0":"V9.0"
       }
     }
   }
