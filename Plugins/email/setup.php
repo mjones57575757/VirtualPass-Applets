@@ -135,7 +135,6 @@ if ($_GET['step'] == "1"){
 }
 if ($_GET['step'] == "2"){
     mkdir("../../../../src/usr_pre_fls/mailer");
-    unlink("../../../../config/config.ini");
     copy("./mailer/Exception.php", "../../../../src/usr_pre_fls/mailer/Exception.php");
     copy("./mailer/OAuth.php", "../../../../src/usr_pre_fls/mailer/OAuth.php");
     copy("./mailer/PHPMailer.php", "../../../../src/usr_pre_fls/mailer/PHPMailer.php");
