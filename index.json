@@ -47,7 +47,7 @@
         "3":"/src/usr_pre_fls/include/SMTP.php",
         "4":"/src/usr_pre_fls/email.php"
       },
-      "to remove_dir":"0",
+      "to_remove_dir":"0",
       "remove_dir":{
         "0":"/src/usr_pre_fls/include"
       }
