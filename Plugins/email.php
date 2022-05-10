@@ -14,7 +14,7 @@ include "mailer/Exception.php";
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 
-function send($email, $passwd, $t_email, $username){
+function send($email, $passwd, $t_email, $username, $contents){
     //Create a new PHPMailer instance
     $mail = new PHPMailer();
 
@@ -70,7 +70,7 @@ function send($email, $passwd, $t_email, $username){
 
     //Read an HTML message body from an external file, convert referenced images to embedded,
     //convert HTML into a basic plain-text alternative body
-    //$mail->msgHTML(file_get_contents('contents.html'), __DIR__);
+    $mail->msgHTML(file_get_contents($contents), __DIR__);
 
     //Replace the plain text body with one created manually
     $mail->AltBody = 'This is a plain-text message body';
