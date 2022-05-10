@@ -80,7 +80,7 @@ function send($email, $passwd, $t_email, $username, $contents){
 
     //send the message, check for errors
     if (!$mail->send()) {
-        echo 'Mailer Error: ' . $mail->ErrorInfo;
+        exec('Mailer Error: ' . $mail->ErrorInfo);
     } else {
         echo 'Message sent!';
         //Section 2: IMAP
