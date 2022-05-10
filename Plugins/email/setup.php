@@ -89,7 +89,7 @@ if ($_GET['step'] == 0){
         fwrite($oauth_file, file_get_contents("https://raw.githubusercontent.com/PHPMailer/PHPMailer/master/src/OAuth.php"));
         fwrite($mailer_file, file_get_contents("https://raw.githubusercontent.com/PHPMailer/PHPMailer/master/src/PHPMailer.php"));
         fwrite($stmp_file, file_get_contents("https://raw.githubusercontent.com/PHPMailer/PHPMailer/master/src/SMTP.php"));
-        fwrite($email_file, file_get_contents("https://raw.githubusercontent.com/Duedot43/VirtualPass-Applets/master/Plugins/email.php"));
+        fwrite($email_file, file_get_contents("https://raw.githubusercontent.com/Duedot43/VirtualPass-Applets/master/Plugins/email/email.php"));
         fclose($exception_file);
         fclose($oauth_file);
         fclose($mailer_file);
