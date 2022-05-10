@@ -95,7 +95,7 @@ if ($_GET['step'] == 0){
             "email_username"=>$_POST['username']
         );
         $main_json_file = fopen("../tmp/mail.json", "w");
-        fwrite($main_json_file, json_encode($main_json));
+        fwrite($main_json_file, json_encode($mail_json));
         fclose($main_json_file);
         header("Location: /administrator/plugin_manager/tmp/setup.php?plugin=" . $_GET['plugin'] . "&step=1");
     }
