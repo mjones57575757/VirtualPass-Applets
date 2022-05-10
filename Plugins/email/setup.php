@@ -14,13 +14,14 @@ function config_set($config_file, $section, $key, $value) {
 }
 if (!isset($_GET['step'])){
     header("Location: /administrator/plugin_manager/tmp/setup.php?plugin=" . $_GET['plugin'] . "&step=0");
+    exit();
 }
 if ($_GET['step'] == 0){
     if (!isset($_POST['email']) and !isset($_POST['passwd']) and !isset($_POST['t_email'])){
         echo '
         <title>Setup emails</title>
         <head>
-            <link href="style.css" rel="stylesheet" type="text/css" />
+            <link href="/style.css" rel="stylesheet" type="text/css" />
         </head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Register</title>
