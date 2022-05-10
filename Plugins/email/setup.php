@@ -13,7 +13,7 @@ function config_set($config_file, $section, $key, $value) {
     file_put_contents($config_file, $new_content);
 }
 if (!isset($_GET['step'])){
-    header("Location: /administrator/plugin_manager/setup.php?plugin=" . $_GET['plugin'] . "&step=0");
+    header("Location: /administrator/plugin_manager/tmp/setup.php?plugin=" . $_GET['plugin'] . "&step=0");
 }
 if ($_GET['step'] == 0){
     if (!isset($_POST['email']) and !isset($_POST['passwd']) and !isset($_POST['t_email'])){
