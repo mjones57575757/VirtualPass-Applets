@@ -149,6 +149,5 @@ if ($_GET['step'] == "2"){
     unlink("./mail.json");
     unlink("./config.ini");
     rmdir("./mailer");
-    rmdir("../tmp");
     header("Location: /administrator/plugin_manager/use_plugin.php?plugin=" . $_GET['plugin'] . "&setup=1");
 }

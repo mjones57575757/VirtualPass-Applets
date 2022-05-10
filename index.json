@@ -44,16 +44,16 @@
       },
       "to_remove_file":"5",
       "remove_file":{
-        "0":"/src/usr_pre_fls/include/Exception.php",
-        "1":"/src/usr_pre_fls/include/OAuth.php",
-        "2":"/src/usr_pre_fls/include/PHPMailer.php",
-        "3":"/src/usr_pre_fls/include/SMTP.php",
+        "0":"/src/usr_pre_fls/mailer/Exception.php",
+        "1":"/src/usr_pre_fls/mailer/OAuth.php",
+        "2":"/src/usr_pre_fls/mailer/PHPMailer.php",
+        "3":"/src/usr_pre_fls/mailer/SMTP.php",
         "4":"/src/usr_pre_fls/email.php",
-        "5":"/config/email.json"
+        "5":"/config/mail.json"
       },
       "to_remove_dir":"0",
       "remove_dir":{
-        "0":"/src/usr_pre_fls/include"
+        "0":"/src/usr_pre_fls/mailer"
       }
     }
   }
