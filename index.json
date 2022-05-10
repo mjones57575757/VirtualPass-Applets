@@ -14,6 +14,42 @@
       },
       "orig_url":{
         "0":"https://raw.githubusercontent.com/Duedot43/VirtualPass/master/src/usr_pre_fls/teacher_auth.php"
+      },
+      "to_remove_file":"0",
+      "remove_file":{
+        "0":"None"
+      },
+      "to remove_dir":"0",
+      "remove_dir":{
+        "0":"None"
+      }
+    },
+    "emails":{
+      "name":"user_emails",
+      "html_name":"User emails",
+      "changed":0,
+      "setup":"https://raw.githubusercontent.com/Duedot43/VirtualPass-Applets/master/Plugins/email/setup.php",
+      "location":{
+        "0":"/src/usr_pre_fls/email.php"
+      },
+      "description":"This plugin enables the use of emails",
+      "clone_url":{
+        "0":"https://raw.githubusercontent.com/Duedot43/VirtualPass-Applets/master/Plugins/email.php"
+      },
+      "orig_url":{
+        "0":"None"
+      },
+      "to_remove_file":"4",
+      "remove_file":{
+        "0":"/src/usr_pre_fls/include/Exception.php",
+        "1":"/src/usr_pre_fls/include/OAuth.php",
+        "2":"/src/usr_pre_fls/include/PHPMailer.php",
+        "3":"/src/usr_pre_fls/include/SMTP.php",
+        "4":"/src/usr_pre_fls/email.php"
+      },
+      "to remove_dir":"0",
+      "remove_dir":{
+        "0":"/src/usr_pre_fls/include"
       }
     }
   }

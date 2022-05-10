@@ -50,6 +50,11 @@ if ($_GET['step'] == 0){
                             <td>:</td>
                             <td><input class="box" name="t_email" autocomplete="off"  id="t_email"></td>
                         </tr>
+                        <tr>
+                            <td>Gmail username</td>
+                            <td>:</td>
+                            <td><input class="box" name="username" autocomplete="off"  id="username"></td>
+                        </tr>
         </tr>
         <tr>
             <td>&nbsp;</td>
@@ -63,21 +68,65 @@ if ($_GET['step'] == 0){
         </table>
         ';
     } else{
-        $exception_file = fopen("./tmp/Exception.php", "w");
-        $oauth_file = fopen("./tmp/OAuth.php", "w");
-        $mailer_file = fopen("./tmp/PHPMailer.php", "w");
-        $stmp_file = fopen("./tmp/SMTP.php", "w");
+        mkdir("./tmp/mailer");
+        $exception_file = fopen("./tmp/mailer/Exception.php", "w");
+        $oauth_file = fopen("./tmp/mailer/OAuth.php", "w");
+        $mailer_file = fopen("./tmp/mailer/PHPMailer.php", "w");
+        $stmp_file = fopen("./tmp/mailer/SMTP.php", "w");
         $email_file = fopen("./tmp/email.php", "w");
         fwrite($exception_file, file_get_contents("https://raw.githubusercontent.com/PHPMailer/PHPMailer/master/src/Exception.php"));
         fwrite($oauth_file, file_get_contents("https://raw.githubusercontent.com/PHPMailer/PHPMailer/master/src/OAuth.php"));
         fwrite($mailer_file, file_get_contents("https://raw.githubusercontent.com/PHPMailer/PHPMailer/master/src/PHPMailer.php"));
         fwrite($stmp_file, file_get_contents("https://raw.githubusercontent.com/PHPMailer/PHPMailer/master/src/SMTP.php"));
-        fwrite($email_file, file_get_contents("https://raw.githubusercontent.com/PHPMailer/PHPMailer/master/src/SMTP.php"));
+        fwrite($email_file, file_get_contents("https://raw.githubusercontent.com/Duedot43/VirtualPass-Applets/master/Plugins/email.php"));
         fclose($exception_file);
         fclose($oauth_file);
         fclose($mailer_file);
         fclose($stmp_file);
-
-
+        fclose($email_file);
+        include "./tmp/email.php";
+        send($_POST['email'], $_POST['passwd'], $_POST['t_email'], $_POST['username']);
+        header("Location: /administrator/plugin_manager/setup.php?plugin=" . $_GET['plugin'] . "&step=1");
     }
+}
+if ($_GET['step'] == "1"){
+    echo '<head>
+    <link href="/style.css" rel="stylesheet" type="text/css" />
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Install/Remove plugin</title>
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="3" cellspacing="1">
+<tr>
+<td colspan="80"><strong>Did you recive the email?</strong></td>
+</tr>
+<tr>
+<td width="0"></td>
+<td width="0"></td>
+<td width="294"><input class="reg" type="button" id="return" value="Yes" onclick="location=\'/administrator/plugin_manager/setup.php?plugin=' . $_GET['plugin'] . '&step=2\'"</td>
+<td width="78"></td>
+<td width="80"></td>
+<td width="294"><input class="reg" type="button" value="No" onclick="location=\'/administrator/plugin_manager/setup.php?plugin=' . $_GET['plugin'] . '&step=0\'"/></td>
+<td width="0"></td>
+<td width="0"></td>
+</tr>
+<tr>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>';
+}
+if ($_GET['setup'] == "2"){
+    mkdir("../../../../src/usr_pre_fls/include");
+    copy("./tmp/include/Exception.php", "../../../../src/usr_pre_fls/include/Exception.php");
+    copy("./tmp/include/OAuth.php", "../../../../src/usr_pre_fls/include/OAuth.php");
+    copy("./tmp/include/PHPMailer.php", "../../../../src/usr_pre_fls/include/PHPMailer.php");
+    copy("./tmp/include/SMTP.php", "../../../../src/usr_pre_fls/include/SMTP.php");
+    header("Location: /administrator/plugin_manager/use_plugin.php?plugin=" . $_GET['plugin'] . "&setup=1");
 }
