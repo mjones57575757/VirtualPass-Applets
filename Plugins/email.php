@@ -15,7 +15,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-function send($email, $passwd, $t_email, $username, $contents, $server){
+function send($email, $passwd, $t_email, $username, $contents, $server, $port){
     $mail = new PHPMailer(true);
 
     try {
@@ -27,7 +27,7 @@ function send($email, $passwd, $t_email, $username, $contents, $server){
         $mail->Username   = $username;                     //SMTP username
         $mail->Password   = $passwd;                               //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-        $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+        $mail->Port       = $port;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
         //Recipients
         $mail->setFrom($email, 'Mailer');

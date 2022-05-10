@@ -61,6 +61,11 @@ if ($_GET['step'] == 0){
                             <td>:</td>
                             <td><input class="box" name="server" autocomplete="off" placeholder="smtp.gmail.com" id="server"></td>
                         </tr>
+                        <tr>
+                            <td>SMTP Server port</td>
+                            <td>:</td>
+                            <td><input class="box" name="server_port" autocomplete="off" placeholder="143" id="server_port"></td>
+                        </tr>
         </tr>
         <tr>
             <td>&nbsp;</td>
@@ -98,7 +103,8 @@ if ($_GET['step'] == 0){
             "email_email" => $_POST['email'],
             "email_passwd"=>$_POST['passwd'],
             "email_username"=>$_POST['username'],
-            "server"=>$_POST['server']
+            "server"=>$_POST['server'],
+            "server_port"=>$_POST['server_port']
         );
         $main_json_file = fopen("../tmp/mail.json", "w");
         fwrite($main_json_file, json_encode($mail_json));
