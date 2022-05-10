@@ -115,10 +115,10 @@ if ($_GET['step'] == "1"){
 <tr>
 <td width="0"></td>
 <td width="0"></td>
-<td width="294"><input class="reg" type="button" id="return" value="Yes" onclick="location=\'/administrator/plugin_manager/setup.php?plugin=' . $_GET['plugin'] . '&step=2\'"</td>
+<td width="294"><input class="reg" type="button" id="return" value="Yes" onclick="location=\'/administrator/plugin_manager/tmp/setup.php?plugin=' . $_GET['plugin'] . '&step=2\'"</td>
 <td width="78"></td>
 <td width="80"></td>
-<td width="294"><input class="reg" type="button" value="No" onclick="location=\'/administrator/plugin_manager/setup.php?plugin=' . $_GET['plugin'] . '&step=0\'"/></td>
+<td width="294"><input class="reg" type="button" value="No" onclick="location=\'/administrator/plugin_manager/tmp/setup.php?plugin=' . $_GET['plugin'] . '&step=0\'"/></td>
 <td width="0"></td>
 <td width="0"></td>
 </tr>
