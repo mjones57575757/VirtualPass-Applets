@@ -128,5 +128,12 @@ if ($_GET['setup'] == "2"){
     copy("./tmp/include/OAuth.php", "../../../../src/usr_pre_fls/include/OAuth.php");
     copy("./tmp/include/PHPMailer.php", "../../../../src/usr_pre_fls/include/PHPMailer.php");
     copy("./tmp/include/SMTP.php", "../../../../src/usr_pre_fls/include/SMTP.php");
+    unlink("./tmp/include/Exception.php");
+    unlink("./tmp/include/OAuth.php");
+    unlink("./tmp/include/PHPMailer.php");
+    unlink("./tmp/include/SMTP.php");
+    unlink("./tmp/email.php");
+    rmdir("./tmp/include");
+    rmdir("./tmp");
     header("Location: /administrator/plugin_manager/use_plugin.php?plugin=" . $_GET['plugin'] . "&setup=1");
 }
