@@ -66,46 +66,6 @@
         "1":"V9.1"
       }
     },
-    "V9.0":{
-      "name":"V9.0",
-      "html_name":"Upgrade/Downgrade to/from VirtualPass version 9.0",
-      "changed":4,
-      "setup":"None",
-      "location":{
-        "0":"/src/administrator/plugin_manager/disp_plugin.php",
-        "1":"/src/administrator/plugin_manager/use_plugin.php",
-        "2":"/src/robots.txt",
-        "3":"/src/usr_pre_fls/plugins.json",
-        "4":"/version-info"
-      },
-      "description":"This is an update for VirtualPass",
-      "clone_url":{
-        "0":"https://raw.githubusercontent.com/Duedot43/VirtualPass/V9.0/src/administrator/plugin_manager/disp_plugin.php",
-        "1":"https://raw.githubusercontent.com/Duedot43/VirtualPass/V9.0/src/administrator/plugin_manager/use_plugin.php",
-        "2":"https://raw.githubusercontent.com/Duedot43/VirtualPass/V9.0/src/robots.txt",
-        "3":"https://raw.githubusercontent.com/Duedot43/VirtualPass/V9.0/src/usr_pre_fls/plugins.json",
-        "4":"https://raw.githubusercontent.com/Duedot43/VirtualPass/V9.0/version-info"
-      },
-      "orig_url":{
-        "0":"https://raw.githubusercontent.com/Duedot43/VirtualPass/V9.1/src/administrator/plugin_manager/disp_plugin.php",
-        "1":"https://raw.githubusercontent.com/Duedot43/VirtualPass/V9.1/src/administrator/plugin_manager/use_plugin.php",
-        "2":"https://raw.githubusercontent.com/Duedot43/VirtualPass/V9.1/src/robots.txt",
-        "3":"https://raw.githubusercontent.com/Duedot43/VirtualPass/V9.1/src/usr_pre_fls/plugins.json",
-        "4":"https://raw.githubusercontent.com/Duedot43/VirtualPass/V9.1/version-info"
-      },
-      "to_remove_file":"0",
-      "remove_file":{
-        "0":"None"
-      },
-      "to_remove_dir":"0",
-      "remove_dir":{
-        "0":"None"
-      },
-      "vers":"0",
-      "valid_ver":{
-        "0":"V9.1"
-      }
-    },
     "V9.1":{
       "name":"V9.1",
       "html_name":"Upgrade/Downgrade to/from VirtualPass version 9.1",
@@ -144,6 +104,46 @@
       "vers":"0",
       "valid_ver":{
         "0":"V9.0"
+      }
+    },
+    "V9.0":{
+      "name":"V9.0",
+      "html_name":"Upgrade/Downgrade to/from VirtualPass version 9.0",
+      "changed":4,
+      "setup":"None",
+      "location":{
+        "0":"/src/administrator/plugin_manager/disp_plugin.php",
+        "1":"/src/administrator/plugin_manager/use_plugin.php",
+        "2":"/src/robots.txt",
+        "3":"/src/usr_pre_fls/plugins.json",
+        "4":"/version-info"
+      },
+      "description":"This is an update for VirtualPass",
+      "clone_url":{
+        "0":"https://raw.githubusercontent.com/Duedot43/VirtualPass/V9.0/src/administrator/plugin_manager/disp_plugin.php",
+        "1":"https://raw.githubusercontent.com/Duedot43/VirtualPass/V9.0/src/administrator/plugin_manager/use_plugin.php",
+        "2":"https://raw.githubusercontent.com/Duedot43/VirtualPass/V9.0/src/robots.txt",
+        "3":"https://raw.githubusercontent.com/Duedot43/VirtualPass/V9.0/src/usr_pre_fls/plugins.json",
+        "4":"https://raw.githubusercontent.com/Duedot43/VirtualPass/V9.0/version-info"
+      },
+      "orig_url":{
+        "0":"https://raw.githubusercontent.com/Duedot43/VirtualPass/V9.1/src/administrator/plugin_manager/disp_plugin.php",
+        "1":"https://raw.githubusercontent.com/Duedot43/VirtualPass/V9.1/src/administrator/plugin_manager/use_plugin.php",
+        "2":"https://raw.githubusercontent.com/Duedot43/VirtualPass/V9.1/src/robots.txt",
+        "3":"https://raw.githubusercontent.com/Duedot43/VirtualPass/V9.1/src/usr_pre_fls/plugins.json",
+        "4":"https://raw.githubusercontent.com/Duedot43/VirtualPass/V9.1/version-info"
+      },
+      "to_remove_file":"0",
+      "remove_file":{
+        "0":"None"
+      },
+      "to_remove_dir":"0",
+      "remove_dir":{
+        "0":"None"
+      },
+      "vers":"0",
+      "valid_ver":{
+        "0":"V9.1"
       }
     }
   }
