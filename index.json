@@ -1,5 +1,34 @@
 {
   "plugins":{
+    "ck_ver":{
+      "name":"ck_ver",
+      "html_name":"Check current version",
+      "changed":0,
+      "setup":"None",
+      "location":{
+        "0":"/src/usr_pre_fls/teacher_auth.php"
+      },
+      "description":"This plugin adds a version number at the top of the admin portal",
+      "clone_url":{
+        "0":"https://raw.githubusercontent.com/Duedot43/VirtualPass-Applets/master/Plugins/version/menu.php"
+      },
+      "orig_url":{
+        "0":"https://raw.githubusercontent.com/Duedot43/VirtualPass/master/src/administrator/menu.php"
+      },
+      "to_remove_file":"0",
+      "remove_file":{
+        "0":"None"
+      },
+      "to_remove_dir":"0",
+      "remove_dir":{
+        "0":"None"
+      },
+      "vers":"1",
+      "valid_ver":{
+        "0":"V9.0",
+        "1":"V9.1"
+      }
+    },
     "ccsd_auth":{
       "name":"ccsd_auth",
       "html_name":"CCSD Teacher Portal Authentication",
