@@ -98,10 +98,11 @@
     "Cart_checkout":{
       "name":"Cart_checkout",
       "html_name":"Cart_checkout",
-      "changed":0,
+      "changed":1,
       "setup":"https://raw.githubusercontent.com/mjones57575757/VirtualPass-Applets/master/Plugins/Cart_checkout/setup.php",
       "location":{
         "0":"/src/usr_pre_fls/Cart_checkout.php",
+        "1":"/config/config.ini"
       },
       "description":"This plugin allows you to checkout a chromebook cart",
       "clone_url":{
@@ -109,6 +110,7 @@
       },
       "orig_url":{
         "0":"None",
+        "1":"https://raw.githubusercontent.com/Duedot43/VirtualPass/master/config/config.ini"
       },
       "to_remove_file":"0",
       "remove_file":{
