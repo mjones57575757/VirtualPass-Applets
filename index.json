@@ -98,25 +98,34 @@
     "cart_checkout":{
       "name":"cart_checkout",
       "html_name":"Computer cart checkout",
-      "changed":0,
+      "changed":2,
       "setup":"https://raw.githubusercontent.com/mjones57575757/VirtualPass-Applets/master/Plugins/cart_checkout/setup.php",
       "location":{
-        "0":"/src/usr_pre_fls/checkout.php"
+        "0":"/src/com_checkout/index.php",
+        "1":"/com_config/com_index.json",
+        "2":"/src/com_checkout/regcart.php"
       },
       "description":"This plugin allows you to check in/out a computer cart's",
       "clone_url":{
-        "0":"https://raw.githubusercontent.com/mjones57575757/VirtualPass-Applets/master/Plugins/cart_checkout/checkout.php"
+        "0":"https://raw.githubusercontent.com/mjones57575757/VirtualPass-Applets/master/Plugins/cart_checkout/index.php",
+        "1":"https://raw.githubusercontent.com/mjones57575757/VirtualPass-Applets/master/Plugins/cart_checkout/base_cart.json",
+        "2":"https://raw.githubusercontent.com/mjones57575757/VirtualPass-Applets/master/Plugins/cart_checkout/regcart.php"
       },
       "orig_url":{
-        "0":"None"
+        "0":"None",
+        "1":"None",
+        "2":"None"
       },
-      "to_remove_file":"0",
+      "to_remove_file":"2",
       "remove_file":{
-        "0":"/src/usr_pre_fls/checkout.php"
+        "0":"/src/cart_checkout/index.php",
+        "1":"/com_config/com_index.json",
+        "2":"/src/com_checkout/regcart.php"
       },
-      "to_remove_dir":"0",
+      "to_remove_dir":"1",
       "remove_dir":{
-        "0":"None"
+        "0":"/src/cart_checkout",
+        "1":"/com_config"
       },
       "vers":"1",
       "valid_ver":{
