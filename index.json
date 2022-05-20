@@ -13,7 +13,7 @@
         "0":"https://raw.githubusercontent.com/Duedot43/VirtualPass-Applets/master/Plugins/version/menu.php"
       },
       "orig_url":{
-        "0":"https://raw.githubusercontent.com/Duedot43/VirtualPass/master/src/administrator/menu.php"
+        "0":"https://raw.githubusercontent.com/Duedot43/VirtualPass/V9.2/src/administrator/menu.php"
       },
       "to_remove_file":"0",
       "remove_file":{
@@ -23,10 +23,12 @@
       "remove_dir":{
         "0":"None"
       },
-      "vers":"1",
+      "vers":"3",
       "valid_ver":{
         "0":"V9.0",
-        "1":"V9.1"
+        "1":"V9.1",
+        "2":"V9.2",
+        "3":"V9.3"
       }
     },
     "ccsd_auth":{
@@ -42,7 +44,7 @@
         "0":"https://raw.githubusercontent.com/Duedot43/VirtualPass-Applets/master/Plugins/teacher_auth/teacher_auth.php"
       },
       "orig_url":{
-        "0":"https://raw.githubusercontent.com/Duedot43/VirtualPass/master/src/usr_pre_fls/teacher_auth.php"
+        "0":"https://raw.githubusercontent.com/Duedot43/VirtualPass/V9.2/src/usr_pre_fls/teacher_auth.php"
       },
       "to_remove_file":"0",
       "remove_file":{
@@ -52,10 +54,12 @@
       "remove_dir":{
         "0":"None"
       },
-      "vers":"1",
+      "vers":"3",
       "valid_ver":{
         "0":"V9.0",
-        "1":"V9.1"
+        "1":"V9.1",
+        "2":"V9.2",
+        "3":"V9.3"
       }
     },
     "emails":{
@@ -74,7 +78,7 @@
       },
       "orig_url":{
         "0":"None",
-        "1":"https://raw.githubusercontent.com/Duedot43/VirtualPass/master/config/config.ini"
+        "1":"https://raw.githubusercontent.com/Duedot43/VirtualPass/V9.2/config/config.ini"
       },
       "to_remove_file":"5",
       "remove_file":{
@@ -89,32 +93,37 @@
       "remove_dir":{
         "0":"/src/usr_pre_fls/mailer"
       },
-      "vers":"1",
+      "vers":"3",
       "valid_ver":{
         "0":"V9.0",
-        "1":"V9.1"
+        "1":"V9.1",
+        "2":"V9.2",
+        "3":"V9.3"
       }
       },
     "cart_checkout":{
       "name":"cart_checkout",
       "html_name":"Computer cart checkout",
-      "changed":2,
+      "changed":3,
       "setup":"https://raw.githubusercontent.com/mjones57575757/VirtualPass-Applets/master/Plugins/cart_checkout/setup.php",
       "location":{
         "0":"/src/com_checkout/index.php",
         "1":"/com_config/com_index.json",
-        "2":"/src/com_checkout/regcart.php"
+        "2":"/src/com_checkout/regcart.php",
+        "3":"/src/index.php"
       },
       "description":"This plugin allows you to check in/out a computer cart's",
       "clone_url":{
-        "0":"https://raw.githubusercontent.com/mjones57575757/VirtualPass-Applets/master/Plugins/cart_checkout/index.php",
-        "1":"https://raw.githubusercontent.com/mjones57575757/VirtualPass-Applets/master/Plugins/cart_checkout/base_cart.json",
-        "2":"https://raw.githubusercontent.com/mjones57575757/VirtualPass-Applets/master/Plugins/cart_checkout/regcart.php"
+        "0":"https://raw.githubusercontent.com/mjones57575757/VirtualPass-Applets/master/Plugins/cart_checkout/new_files/com_checkout/index.php",
+        "1":"https://raw.githubusercontent.com/mjones57575757/VirtualPass-Applets/master/Plugins/cart_checkout/new_files/com_config/base_cart.json",
+        "2":"https://raw.githubusercontent.com/mjones57575757/VirtualPass-Applets/master/Plugins/cart_checkout/new_files/com_checkout/regcart.php",
+        "3":"https://raw.githubusercontent.com/mjones57575757/VirtualPass-Applets/master/Plugins/cart_checkout/replace_files/src/index.php"
       },
       "orig_url":{
         "0":"None",
         "1":"None",
-        "2":"None"
+        "2":"None",
+        "3":"https://raw.githubusercontent.com/Duedot43/VirtualPass/V9.2/src/index.php"
       },
       "to_remove_file":"2",
       "remove_file":{
@@ -127,10 +136,12 @@
         "0":"/src/cart_checkout",
         "1":"/com_config"
       },
-      "vers":"1",
+      "vers":"3",
       "valid_ver":{
         "0":"V9.0",
-        "1":"V9.1"
+        "1":"V9.1",
+        "2":"V9.2",
+        "3":"V9.3"
     }
     }
   }
